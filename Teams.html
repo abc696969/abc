@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-family:F1;
+        src: url(Nexa-Heavy.ttf);
+    }
+    
+    .navbar{
+    background-color:#0097e4;
+    border-radius: 40px;
+    margin: 0px 0px;
+    position: sticky;
+    top: 16px;
+    z-index: 1;
+    size: 100%;
+    }
+
+    .navbar ul{
+        overflow: auto;
+    }
+
+   .team{
+     float: left;
+     list-style: none;
+     font-family:F1;
+     margin: 7px 32px;
+     padding: 16px 23px;
+    }
+
+    .navbar li a{
+        text-decoration: none;
+    }
+
+    .navbar li a:visited{
+        color:rgb(0, 0, 0);
+    }
+    .navbar li a:hover{
+        color:rgb(219, 215, 215);
+    }
+    .navbar li a:link{
+        color: black;
+    }
+
+    .team{ 
+        position: relative;
+    } 
+
+    .teams{
+        position: absolute;
+        height: 40px;
+        left: -20px;
+        top: 8px;
+    }
+    
+
+    .search {
+        float: right;
+        list-style: none;
+        padding: 13px 17px;
+        
+    }
+
+    .search input{
+        border-radius: 40px;
+        border: none;
+        padding: 14px 28px;
+        width: 133px;
+    }
+
+    .team:link{
+        color: black;
+    }
+    
+    .navbar{
+        box-shadow: 0px 0px black;
+        transition: box-shadow 1s;
+    }
+    .navbar:hover{
+     box-shadow: 10px 10px 30px #015b87;
+    } 
+    
+
+    .team{
+        position: relative;
+        bottom: 0px;
+        transition: top 2s ease-in--out;
+    }
+
+    .team:hover{
+        bottom: 5px;
+
+     }
+
+     .search input:hover {
+        position: relative;
+       background-color:#a0c3fd;
+       color:rgb(20, 80, 154);
+       animation-name: searchbar;
+       animation-duration: 2s;
+    }
+
+    @keyframes searchbar{
+        0%{background-color:white}
+        100%{background-color:#a0c3fd}
+    }
+    
+   body{
+    background-image: url(body.jpg);
+    background-repeat: no-repeat;
+    background-size: 1900px;
+    background-position: 0px -77px;
+    overflow-x: hidden;
+   }
+
+    #retro{
+        display:inline-block;
+        margin: 0px 0px ;
+        height: 900px;
+    }
+
+    .container{
+        /* float: left;
+        position: relative;
+        font-size: 50px;
+        margin: 25px 25px;
+        padding: 180px 0px; */
+        /* height: 400px;
+        width: 280px; */
+        top: 25px;
+        left: 15px;
+        font-family: F1;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+
+    /* #retro a:hover{
+        position: relative;
+        bottom: 15px;
+    }
+    .container:hover{
+        box-shadow: 1px 1px 20px black;
+    } */
+
+
+    /* #VK{
+        background-image:url(RCBLOGO.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0px -65px;   
+    }
+    #MS{
+        background-image: url(CSKLOGO.jpg);
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: -20px -35px;
+    }
+    #RS{
+        background-image: url(MIlogo.jpg);
+        background-size:100%;
+        background-repeat:no-repeat ;
+        background-position: 0px -30px;
+    }
+    #SG{
+        background-image: url(GT.png), url(GTBG1.jpg);
+        background-size: 100%,300%;
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0px 25px, -115px -30px;
+    }
+    #KL{
+        background-image:url(LSG.png), url(LSGBG1.avif);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100%,150%;
+        background-position: 0px 30px,0px 0px;
+    }
+    #NR{
+        background-image:url(KKR.png), url(KKRBG.jpg);
+        background-repeat: no-repeat, no-repeat;
+        background-size:80%, 150%;
+        background-position: 25px 60px,-70px -280px;
+    }
+    #SS{
+        background-image: url(RR1.png), url(RRBG.jpg);
+        background-repeat: no-repeat;
+        background-size: 75%, 300%;
+        background-position: 40px 80px, -50px -90px;
+    }
+    #AM{
+        background-image: url(SRHLOGO.jpg);
+        background-repeat: no-repeat;
+        background-size:133%;
+        background-position: -45px 0px;
+    }
+    #DW{
+        background-image: url(DCLOGO.jpg);
+        background-repeat: no-repeat;
+        background-size: 125%;
+        background-position: -35px -140px;
+    }
+    #SD{
+        background-image: url(PBKS.png), url(PBKSBG.avif);
+        background-repeat: no-repeat;
+        background-size: 80%,200%;
+        background-position: 30px 70px,-200px 0px;
+    } */
+    
+    #header{
+        display:block;
+        font-family: F1;
+        text-align: center;
+        font-size: 110px;
+        color: #0161ae;
+        width: 1700px;
+        margin: -105px -16px 30px -16px;
+        padding: 90px 0px 0px 0px;
+        border-bottom: 20px solid #0a4a8a;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius:40px;
+        background-image: url(headerBG.jpg);
+        background-repeat:no-repeat;
+        background-size:100%;
+        background-position: 0px -400px;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li class="team"><a href="#"><img src="info.png" class="teams">About</a></li>
+            <li class="team"><a href="Teams.html"><img src="team.png" class="teams">Teams</a></li>
+            <li class="team"><a href="duck.html"><img src="trophy.png" class="teams">Winners</a></li>
+            <li class="team"><a href="Points Table.html"><img src="ranking.png" class="teams">Points Table</a></li>
+            <li class="team"><a href="#"><img src="medal.png" class="teams">Stats</a></li>
+            <li class="search">
+                <input type="text" name="search" id="search" placeholder="Search This Website">
+            </li>
+        </ul>
+    </div>
+    
+    <div id="header">IPL TEAMS</div>
+    
+    <div id="retro">
+        <a href=""><div id="VK" class="container"></div></a>
+        <a href=""><div id="MS" class="container"></div></a>
+        <a href=""><div id="RS" class="container"></div></a>
+        <a href=""><div id="SG" class="container"></div></a>
+        <a href=""><div id="NR" class="container"></div></a>
+        <a href=""><div id="SS" class="container"></div></a>
+        <a href=""><div id="KL" class="container"></div></a>
+        <a href=""><div id="AM" class="container"></div></a>
+        <a href=""><div id="DW" class="container"></div></a>
+        <a href=""><div id="SD" class="container"></div></a>
+    </div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis inventore nulla itaque eligendi earum molestiae autem tempora voluptates aspernatur culpa in, aliquam unde minus delectus facere est, consequuntur ipsam accusantium eveniet debitis fugiat! Cum natus, earum, dolores hic quia rem odit numquam eveniet molestiae totam nobis deleniti aspernatur saepe officiis necessitatibus minus ratione, placeat possimus nihil? Explicabo nostrum, harum sint cum quo itaque? Commodi eaque in qui a molestias atque modi praesentium expedita quo dolorem harum, incidunt fuga, nemo dolore. Esse ex aut ab temporibus hic, animi sit reiciendis similique impedit, eligendi, quo neque? Porro nihil cumque corporis debitis iste!</div>
+</body>
+
+</html>

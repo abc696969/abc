@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL</title>
+    <style>
+
+
+   /* FOR NAVBAR */
+
+    .navbar{
+    background-color:#0097e4;
+    border-radius: 40px;
+    margin: 0px 0px;
+    position: sticky;
+    top: 16px;
+    }
+    .navbar ul{
+        overflow: auto;
+    }
+   #team{
+     float: left;
+     list-style: none;
+     font-family:F1;
+     margin: 7px 32px;
+     padding: 16px 23px;
+    }
+    .navbar li a{
+        text-decoration: none;
+    }
+
+    .navbar li a:visited{
+        color:rgb(0, 0, 0);
+    }
+    .navbar li a:hover{
+        color:rgb(219, 215, 215);
+    }
+    .navbar li a:link{
+        color: black;
+    }
+
+    #team{ 
+        position: relative;
+    } 
+
+    .teams{
+        position: absolute;
+        height: 40px;
+        left: -20px;
+        top: 8px;
+    }
+    
+
+    .search {
+        float: right;
+        list-style: none;
+        padding: 13px 17px;
+        
+    }
+
+    .search input{
+        border-radius: 40px;
+        border: none;
+        padding: 14px 28px;
+        width: 133px;
+    }
+
+    #team:link{
+        color: black;
+    }
+
+    
+    /* FOR HEADER */
+    
+    
+    @font-face {
+        font-family:F1;
+        src: url(Nexa-Heavy.ttf);
+    }
+    
+    .heading{
+        position: relative;
+        z-index: -1;
+        font-family: F1;
+        color:#5172ca;
+        font-size: 100px;
+        border-bottom: 20px solid #0d4c83;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        padding: 130px 20px 10px 20px;
+        margin: -146px -13px;
+        background-image: url(blue\ background.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        text-align: center;
+        background-position-x:0px ;
+        background-position-y: -240px;
+    }
+    
+    
+    /* FOR TABLE */
+    
+    
+    .manifest{
+        position: relative;
+        top: 90px;
+        margin: 137px 180px;
+        padding: 50px 50px;
+        font-family: F1;
+        border-collapse: collapse;
+    }
+    
+    
+    /* Making rounded corners */
+    
+    th:first-of-type {
+        border-top-left-radius: 10px;
+    }
+    th:last-of-type {
+        border-top-right-radius: 10px;
+    }
+    tr:last-of-type td:first-of-type {
+        border-bottom-left-radius: 10px;
+    }
+    tr:last-of-type td:last-of-type {
+        border-bottom-right-radius: 10px;
+    }
+    
+    .qualified{
+        border-bottom: 1px dashed black;
+    }
+    
+    
+    .head{
+        background-color:#1b99e2;
+        height: 35px;
+    }
+    
+    .manifest td{
+        padding: 7px 20px;
+    }
+    
+    .W{
+        width: 100%;
+    }
+    
+    .logo img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 40px;
+    }
+       
+    .manifest tr:nth-child(even){background-color:#e5d1d132;}
+    
+    /* FOR GRAPHICS */
+    
+    body{
+        overflow-x: hidden;
+        background-image: url(cricket_graphic.png),url(bowling.jpeg);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 20%;
+        background-position-x: 1418px,-64px;
+        background-position-y: 511px, 500px;
+    }
+
+
+     /* ANIMATION */
+
+
+    .navbar{
+        box-shadow: 0px 0px black;
+        transition: box-shadow 1s;
+    }
+    .navbar:hover{
+     box-shadow: 10px 10px 30px #015b87;
+    } 
+    
+
+    #team{
+        position: relative;
+        bottom: 0px;
+        transition: top 2s ease-in--out;
+    }
+
+    #team:hover{
+        bottom: 5px;
+
+     }
+
+     .search input:hover {
+        position: relative;
+       background-color:#a0c3fd;
+       color:rgb(20, 80, 154);
+       animation-name: searchbar;
+       animation-duration: 2s;
+    }
+
+    @keyframes searchbar{
+        0%{background-color:white}
+        100%{background-color:#a0c3fd}
+    }
+
+    
+
+
+    tr.GT:hover {
+
+        color: #DBBE6E;
+        background-color: #2d3858;
+        box-shadow: 1px 1px 20px  #2d3858;
+    }
+    tr.GT:hover td{
+        background-color: transparent;
+    }
+
+
+    tr.CSK:hover {
+        color:#1D418C;
+        background-color: #F9CD05;
+        box-shadow: 1px 1px 20px #F9CD05 ;
+    }
+    tr.CSK:hover td {
+        background-color: transparent;
+    }
+    
+
+    tr.LSG:hover {
+        color:#ffffff;
+        background-color:#0057E2;
+        box-shadow: 5px 5px 20px  #0057E2;
+    }
+    tr.CSK:hover td {
+        background-color: transparent;
+    }
+
+
+    tr.MI:hover {
+        color:#002f58;
+        background-color:#025dc6;
+        box-shadow: 5px 5px 20px  #025dc6;
+    }
+    tr.MI:hover td {
+        background-color: transparent;
+    }
+
+
+    tr.RR:hover {
+        color:#252b51;
+        background-color:#ff34a2;
+        box-shadow: 5px 5px 20px #ff34a2;
+    }
+    tr.RR:hover td {
+        background-color: transparent;
+    }
+
+
+    tr.RCB:hover {
+        color:#270101;
+        background-color:#ce261d;
+        box-shadow: 5px 5px 20px #ce261d;
+    }
+    tr.RCB:hover td {
+        background-color: transparent;
+    }
+    
+
+    tr.KKR:hover {
+        color:#F7D54E;
+        background-color:#2f045a;
+        box-shadow: 5px 5px 20px #2f045a;
+    }
+    tr.KKR:hover td {
+        background-color: transparent;
+    }
+
+
+    tr.PBKS:hover {
+        color:#ffdfd9;
+        background-color:#DD1F2D;
+        box-shadow: 5px 5px 20px #DD1F2D;
+    }
+    tr.PBKS:hover td {
+        background-color: transparent;
+    }
+
+
+    tr.DC:hover {
+        color:#054e9d;
+        background-color:rgb(83, 146, 254);
+        box-shadow: 5px 5px 20px rgb(83, 146, 254);
+    }
+    tr.DC:hover td {
+        background-color: transparent;
+    }
+
+
+    tr.SRH:hover {
+        color:#000000;
+        background-color:#ff7300;
+        border-radius:10px;
+        box-shadow: 5px 5px 20px #FF7300;
+    }
+    tr.SRH:hover td {
+        background-color: transparent;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li id="team"><a href="#"><img src="info.png" class="teams">About</a></li>
+            <li id="team"><a href="Teams.html"><img src="team.png" class="teams">Teams</a></li>
+            <li id="team"><a href="duck.html"><img src="trophy.png" class="teams">Winners</a></li>
+            <li id="team"><a href="Points Table.html"><img src="ranking.png" class="teams">Points Table</a></li>
+            <li id="team"><a href="#"><img src="medal.png" class="teams">Stats</a></li>
+            <li class="search">
+                <input type="text" name="search" id="search" placeholder="Search This Website">
+            </li>
+            
+        </ul>
+    </div>
+    <div class="heading">POINTS TABLE</div>
+    <div>
+        <table class="manifest">
+            <thead>
+                <tr class="head">
+                    <th></th>
+                    <th></th>
+                    <th class="W">Teams</th>
+                    <th>Matches</th>
+                    <th>Wins</th>
+                    <th>Loses</th>
+                    <th>NRR</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="GT">
+                    <td>1(Q)</td>
+                    <td class="logo"><img src="GT.png"></td>
+                    <td class="W">Gujarat Titans</td>
+                    <td>14</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>+0.809</td>
+                    <td>20</td>   
+                </tr>
+                <tr class="CSK">
+                    <td>2(Q)</td>
+                    <td class="logo"><img src="csk.png"></td>
+                    <td class="W">Chennai Super Kings</td>
+                    <td>14</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>+0.652</td>
+                    <td>17</td>
+                </tr>
+                <tr class="LSG">
+                    <td>3(Q)</td>
+                    <td class="logo"><img src="LSG.png"></td>
+                    <td class="W">Lucknow Super Giants</td>
+                    <td>14</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>+0.284</td>
+                    <td>17</td>
+                </tr>
+                <tr class="MI" class="qualified">
+                    <td>4(Q)</td>
+                    <td class="logo"><img src="MI.png"></td>
+                    <td class="W">Mumbai Indians</td>
+                    <td>14</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>-0.044</td>
+                    <td>16</td>
+                </tr>
+                <tr class="RR">
+                    <td>5.</td>
+                    <td class="logo"><img src="RR.png"></td>
+                    <td class="W">Rajasthan Royals</td>
+                    <td>14</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>+0.1.48</td>
+                    <td>14</td>
+                </tr>
+                <tr class="RCB">
+                    <td>6.</td>
+                    <td class="logo"><img src="RCB.png"></td>
+                    <td class="W">Royal Challengers Bangalore</td>
+                    <td>14</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>+0.135</td>
+                    <td>14</td>
+                </tr>
+                <tr class="KKR">
+                    <td>7.</td>
+                    <td class="logo"><img src="KKR.png"></td>
+                    <td class="W">Kolkata Knight Riders</td>
+                    <td>14</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>-0.239</td>
+                    <td>12</td>
+                </tr>
+                <tr class="PBKS">
+                    <td>8.</td>
+                    <td class="logo"><img src="PBKS.png"></td>
+                    <td class="W">Punjab Kings</td>
+                    <td>14</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>-0.304</td>
+                    <td>12</td>
+                </tr>
+                <tr class="DC">
+                    <td>9.</td>
+                    <td class="logo"><img src="DC.png"></td>
+                    <td class="W">Delhi Capitals</td>
+                    <td>14</td>
+                    <td>5</td>
+                    <td>9</td>
+                    <td>-0.808</td>
+                    <td>10</td>
+                </tr>
+                <tr class="SRH">
+                    <td>10.</td>
+                    <td class="logo"><img src="SRH.png"></td>
+                    <td class="W">Sunrisers Hyderabad</td>
+                    <td>14</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>-0.590</td>
+                    <td>08</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ 
+</body>
